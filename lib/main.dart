@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_acrcloud/flutter_acrcloud.dart';
+import 'package:flutter_acrcloud_demo/screen/text_to_speech_screen.dart';
 
 import 'screen/Recognizing_screen.dart';
 import 'screen/identified_music_screen.dart';
@@ -27,6 +28,7 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _pages = <Widget>[
     RecognizeScreen(),
     IdentifiedMusicScreen(),
+    TTS(),
   ];
 
   @override
@@ -40,6 +42,7 @@ class _MyAppState extends State<MyApp> {
           items: [
             navigationItem(navIndex, 0, Icons.record_voice_over, 'Recognizing'),
             navigationItem(navIndex, 1, Icons.list_alt, 'List'),
+            navigationItem(navIndex, 2, Icons.speaker, 'TTS'),
           ],
           selectedLabelStyle: TextStyle(fontSize: 12, color:  Colors.red, fontWeight: FontWeight.w600),
           unselectedLabelStyle: TextStyle(fontSize: 12, color: Colors.grey),
