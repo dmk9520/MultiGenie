@@ -11,10 +11,12 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_acrcloud: ^0.1.6
-  url_launcher:
   shared_preferences:
   sqflite: ^2.2.8+2
   flutter_tts: ^3.8.3
+  url_launcher:
+  speech_to_text: ^5.5.0
+  permission_handler: ^9.2.0
 
 dev_dependencies:
   flutter_test:
