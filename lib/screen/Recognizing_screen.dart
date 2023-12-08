@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_acrcloud/flutter_acrcloud.dart';
-import 'package:flutter_acrcloud_demo/models/music_model.dart';
-import 'package:flutter_acrcloud_demo/widgets/ripple_animation.dart';
-import 'package:flutter_acrcloud_demo/store_handler/database_helper.dart';
+import 'package:MultiGenie/models/music_model.dart';
+import 'package:MultiGenie/widgets/ripple_animation.dart';
+import 'package:MultiGenie/store_handler/database_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class RecognizeScreen extends StatefulWidget {

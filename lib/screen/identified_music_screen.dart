@@ -53,11 +53,13 @@ class _IdentifiedMusicScreenState extends State<IdentifiedMusicScreen> {
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                     child: ListTile(
+                      isThreeLine: true,
                       leading: Icon(Icons.multitrack_audio_sharp, size: 30,color: Colors.redAccent,),
                       tileColor: const Color.fromRGBO(230, 230, 230, 100),
                       contentPadding: const EdgeInsets.all(10),
                       title: Text(musicData[index].title!),
-                      subtitle: Text(musicData[index].artist!),
+                      subtitle: Text(musicData[index].artist! + "\n\nTap to Listen"),
+
                       onTap: () {
                         String searchQuery =
                             '${musicData[index].title} ${musicData[index].artist} lyrics';

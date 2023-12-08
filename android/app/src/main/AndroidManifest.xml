@@ -10,8 +10,8 @@
         </intent>
     </queries>
     <application
-        android:label="MusicGenie"
         android:name="${applicationName}"
+        android:label="MultiGenie"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

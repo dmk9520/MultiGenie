@@ -1,6 +1,6 @@
-name: flutter_acrcloud_demo
-description: A new Flutter project.
-version: 1.0.0+1
+name: MultiGenie
+description: An App to recognise music and having accessibility features like text-to-speech and speech-to-text.
+version: 2.2.1+1
 
 environment:
   sdk: '>=2.19.4 <3.0.0'
@@ -23,6 +23,12 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+  flutter_launcher_icons: 0.11.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
 
 flutter:
 

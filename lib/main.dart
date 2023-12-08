@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_acrcloud/flutter_acrcloud.dart';
-import 'package:flutter_acrcloud_demo/screen/text_to_speech_screen.dart';
+import 'package:MultiGenie/screen/text_to_speech_screen.dart';
 
 import 'screen/Recognizing_screen.dart';
 import 'screen/identified_music_screen.dart';

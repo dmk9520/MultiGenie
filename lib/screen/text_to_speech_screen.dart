@@ -91,7 +91,8 @@ class _TTSState extends State<TTS> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("Text To Speech"),
+          title: const Text("Accessibility"),
+          backgroundColor: Colors.redAccent,
         ),
         body: Container(
           margin: const EdgeInsets.all(10),
@@ -101,9 +102,7 @@ class _TTSState extends State<TTS> {
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const SizedBox(
-                    width: 200,
-                    height: 180,
+                  const Expanded(
                     child: TextField(
                 maxLines: 8, //or null 
                 decoration: InputDecoration(
@@ -114,8 +113,16 @@ class _TTSState extends State<TTS> {
                     ),
                   const SizedBox(
                     width: 10,
-                  ),
+                  ),],
+          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                    padding: const EdgeInsets.all(8)
+                    ),
                     onPressed: _speak,
                     child: const Text("Speak"),
                   ),
@@ -123,12 +130,16 @@ class _TTSState extends State<TTS> {
                     width: 10,
                   ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.redAccent,
+                        padding: const EdgeInsets.all(8)
+                    ),
                     onPressed: _stop,
                     child: const Text("Stop"),
                   ),
                 ],
               ),
-
+SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -138,23 +149,23 @@ class _TTSState extends State<TTS> {
                           controller: _textController,
                           minLines: 6,
                           maxLines: 10,
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.grey.shade300,
-                          ),
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: "Press Mic and start speaking",
+                            )
                         ),
                       ),
                       const SizedBox(
-                        width: 8,
+                        width: 10,
                       ),
-                      FloatingActionButton.small(
+                      FloatingActionButton(
                         onPressed:
                         // If not yet listening for speech start, otherwise stop
                         _speechToText.isNotListening
                             ? _startListening
                             : _stopListening,
                         tooltip: 'Listen',
-                        backgroundColor: Colors.blueGrey,
+                        backgroundColor: Colors.redAccent,
                         child: Icon(_speechToText
                             .isNotListening
                             ? Icons.mic_off
